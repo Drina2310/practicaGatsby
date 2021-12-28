@@ -1,5 +1,6 @@
-import * as React from "react"
-import LayoutBasic from '../layouts/LayoutBasic'
+import * as React from "react";
+import { Button } from 'react-bootstrap';
+import LayoutBasic from '../layouts/LayoutBasic';
 import SeoC from '../components/SeoC';
 
 export default function IndexPage() {
@@ -8,6 +9,7 @@ export default function IndexPage() {
     <LayoutBasic>
       <SeoC title="Home" />
       <h2>Estamos en la home</h2>
+      <Button variant="danger">Danger</Button>
     </LayoutBasic>
 
   )

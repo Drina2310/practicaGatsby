@@ -5,3 +5,5 @@
  */
 
 // You can delete this file if you're not using it
+//Importacion de manera global de css y bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
