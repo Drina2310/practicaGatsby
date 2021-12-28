@@ -1,11 +1,12 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import './LayoutBasic.css';
 
 export default function LayoutBasic(props) {
     const { children } = props
 
     const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
+        query SiteDataQuery {
             site {
                 siteMetadata {
                     title
@@ -15,12 +16,18 @@ export default function LayoutBasic(props) {
             }
         }
     `)
-    console.log(data)
 
     return (
         <div>
-            <h1>Title App</h1>
+            <div className="header">
+                <h1>{data.site.siteMetadata.title}</h1>
+                <div className="menu">
+                    <Link to="/">Index</Link>
+                    <Link to="/about-me">About</Link>
+                </div>
+            </div>
             {children}
         </div>
+
     )
 }
