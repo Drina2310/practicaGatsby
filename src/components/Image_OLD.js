@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
+
+//Sacamos los datos y generamos la imagen
 export default function Image() {
     const data = useStaticQuery(graphql`
         query {
